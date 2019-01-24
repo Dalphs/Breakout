@@ -21,7 +21,7 @@ public class BreakoutApp extends GameApplication {
 
     public void initLevel(){
         TextLevelParser parser = new TextLevelParser(new BreakoutFactory());
-        Level level = parser.parse("levels/somebricks.txt");
+        Level level = parser.parse("levels/bricksballbar.txt");
         getGameWorld().setLevel(level);
     }
 
