@@ -19,6 +19,16 @@ public class BreakoutFactory implements TextEntityFactory {
                 .build();
     }
 
+    @SpawnSymbol('2')
+    public Entity newBrick(SpawnData data){
+        return Entities.builder()
+                .from(data)
+                .type(BreakoutType.BAR).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("brick1.png"))
+                .with(new PhysicsComponent(), new CollidableComponent(true))
+                .with(new BrickComponent())
+                .build();
+    }
+
     @Override
     public char emptyChar() {
         return 0;

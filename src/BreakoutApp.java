@@ -11,7 +11,7 @@ public class BreakoutApp extends GameApplication {
         gameSettings.setWidth(800);
         gameSettings.setHeight(600);
         gameSettings.setVersion("0.1");
-        gameSettings.setIntroEnabled(true);
+        gameSettings.setIntroEnabled(false);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class BreakoutApp extends GameApplication {
 
     public void initLevel(){
         TextLevelParser parser = new TextLevelParser(new BreakoutFactory());
-        Level level = parser.parse("levels/onlybar.txt");
+        Level level = parser.parse("levels/somebricks.txt");
         getGameWorld().setLevel(level);
     }
 
