@@ -10,7 +10,7 @@ public class BallComponent extends Component {
 
     @Override
     public void onUpdate(double tpf) {
-        limitVelocity();
+        //limitVelocity();
     }
 
     private void limitVelocity(){
@@ -26,6 +26,6 @@ public class BallComponent extends Component {
     }
 
     public void release(){
-        physics.setBodyLinearVelocity(new Vec2(2, 5));
+        physics.setBodyLinearVelocity(new Vec2(1, 9));
     }
 }

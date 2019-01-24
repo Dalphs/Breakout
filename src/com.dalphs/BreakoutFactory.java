@@ -20,7 +20,7 @@ import javafx.scene.shape.Circle;
 public class BreakoutFactory implements TextEntityFactory {
 
     @SpawnSymbol('9')
-    public Entity newBat(SpawnData data){
+    public Entity newBat(SpawnData data) {
         PhysicsComponent physics = new PhysicsComponent();
         physics.setBodyType(BodyType.KINEMATIC);
 
@@ -38,7 +38,7 @@ public class BreakoutFactory implements TextEntityFactory {
     public Entity newBrick(SpawnData data){
         return Entities.builder()
                 .from(data)
-                .type(BreakoutType.BAT).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("brick1.png"))
+                .type(BreakoutType.BRICK).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("brick1.png"))
                 .with(new PhysicsComponent(), new CollidableComponent(true))
                 .with(new BrickComponent())
                 .build();
