@@ -7,6 +7,9 @@ import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.parser.text.TextLevelParser;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.settings.GameSettings;
+import com.dalphs.control.BallComponent;
+import com.dalphs.control.BatComponent;
+import com.dalphs.control.BrickComponent;
 import javafx.animation.PathTransition;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
@@ -78,6 +81,7 @@ public class BreakoutApp extends GameApplication {
     protected void initUI() {
         Text text = getUIFactory().newText("Level 1", Color.BLACK, 48);
         getGameScene().addUINode(text);
+        System.out.println(BallComponent.class);
 
         QuadCurve curve = new QuadCurve(-100, 0, getWidth() / 2, getHeight(), getWidth() + 100, 0);
 

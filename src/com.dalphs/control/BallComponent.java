@@ -1,4 +1,4 @@
-package com.dalphs;
+package com.dalphs.control;
 
 import com.almasb.fxgl.core.math.Vec2;
 import com.almasb.fxgl.entity.component.Component;
@@ -26,6 +26,6 @@ public class BallComponent extends Component {
     }
 
     public void release(){
-        physics.setBodyLinearVelocity(new Vec2(5, 5));
+        physics.setBodyLinearVelocity(new Vec2(2, 5));
     }
 }

@@ -5,10 +5,17 @@ import com.almasb.fxgl.entity.*;
 import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.particle.ParticleEmitter;
 import com.almasb.fxgl.particle.ParticleEmitters;
+import com.almasb.fxgl.physics.BoundingShape;
+import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
+import com.dalphs.control.BallComponent;
+import com.dalphs.control.BatComponent;
+import com.dalphs.control.BrickComponent;
 import javafx.scene.effect.BlendMode;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class BreakoutFactory implements TextEntityFactory {
 
@@ -19,7 +26,9 @@ public class BreakoutFactory implements TextEntityFactory {
 
         return Entities.builder()
                 .from(data)
-                .type(BreakoutType.BAT).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("bar.png"))
+                .type(BreakoutType.BAT)
+                .at(FXGL.getSettings().getWidth() / 2 - 50, FXGL.getSettings().getHeight() - 30)
+                .viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("bar.png"))
                 .with(physics, new CollidableComponent(true))
                 .with(new BatComponent())
                 .build();
@@ -48,9 +57,11 @@ public class BreakoutFactory implements TextEntityFactory {
 
         return Entities.builder()
                 .from(data)
-                .type(BreakoutType.BALL).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("Ball.png"))
-                .with(new PhysicsComponent(), new CollidableComponent(true))
-                .with(new BrickComponent())
+                .type(BreakoutType.BALL)
+                .bbox(new HitBox("Main", BoundingShape.circle(10)))
+                .viewFromNode(new Circle(10, Color.DARKGREY))
+                .with(physics, new CollidableComponent(true))
+                .with(new BallComponent())
                 .build();
     }
 

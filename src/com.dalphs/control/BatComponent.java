@@ -1,4 +1,4 @@
-package com.dalphs;
+package com.dalphs.control;
 
 import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.core.math.Vec2;

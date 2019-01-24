@@ -1,4 +1,4 @@
-package com.dalphs;
+package com.dalphs.control;
 
 import com.almasb.fxgl.entity.component.Component;
 
