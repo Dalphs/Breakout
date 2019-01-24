@@ -1,9 +1,11 @@
+package com.dalphs;
+
 import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.core.math.Vec2;
 import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.physics.PhysicsComponent;
 
-public class BarComponent extends Component {
+public class BatComponent extends Component {
 
     private static final float BOUNCE_FACTOR = 1.5f;
     private static final float SPEED_DECAY = 0.67f;

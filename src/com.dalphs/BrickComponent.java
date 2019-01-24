@@ -1,3 +1,5 @@
+package com.dalphs;
+
 import com.almasb.fxgl.entity.component.Component;
 
 public class BrickComponent extends Component {

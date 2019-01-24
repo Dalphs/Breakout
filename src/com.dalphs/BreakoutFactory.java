@@ -1,3 +1,5 @@
+package com.dalphs;
+
 import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.entity.*;
 import com.almasb.fxgl.entity.components.CollidableComponent;
@@ -11,15 +13,15 @@ import javafx.scene.effect.BlendMode;
 public class BreakoutFactory implements TextEntityFactory {
 
     @SpawnSymbol('9')
-    public Entity newBar(SpawnData data){
+    public Entity newBat(SpawnData data){
         PhysicsComponent physics = new PhysicsComponent();
         physics.setBodyType(BodyType.KINEMATIC);
 
         return Entities.builder()
                 .from(data)
-                .type(BreakoutType.BAR).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("bar.png"))
+                .type(BreakoutType.BAT).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("bar.png"))
                 .with(physics, new CollidableComponent(true))
-                .with(new BarComponent())
+                .with(new BatComponent())
                 .build();
     }
 
@@ -27,7 +29,7 @@ public class BreakoutFactory implements TextEntityFactory {
     public Entity newBrick(SpawnData data){
         return Entities.builder()
                 .from(data)
-                .type(BreakoutType.BAR).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("brick1.png"))
+                .type(BreakoutType.BAT).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("brick1.png"))
                 .with(new PhysicsComponent(), new CollidableComponent(true))
                 .with(new BrickComponent())
                 .build();
