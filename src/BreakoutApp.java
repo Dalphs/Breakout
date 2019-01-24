@@ -1,4 +1,6 @@
 import com.almasb.fxgl.app.GameApplication;
+import com.almasb.fxgl.entity.Level;
+import com.almasb.fxgl.parser.text.TextLevelParser;
 import com.almasb.fxgl.settings.GameSettings;
 
 public class BreakoutApp extends GameApplication {
@@ -10,6 +12,17 @@ public class BreakoutApp extends GameApplication {
         gameSettings.setHeight(600);
         gameSettings.setVersion("0.1");
         gameSettings.setIntroEnabled(true);
+    }
+
+    @Override
+    protected void initGame() {
+        initLevel();
+    }
+
+    public void initLevel(){
+        TextLevelParser parser = new TextLevelParser(new BreakoutFactory());
+        Level level = parser.parse("levels/onlybar.txt");
+        getGameWorld().setLevel(level);
     }
 
     public static void main(String[] args) {
