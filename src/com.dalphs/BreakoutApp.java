@@ -14,6 +14,7 @@ import com.almasb.fxgl.settings.GameSettings;
 import com.dalphs.control.BallComponent;
 import com.dalphs.control.BatComponent;
 import com.dalphs.control.BrickComponent;
+import com.dalphs.control.DeathBrickComponent;
 import javafx.animation.PathTransition;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.input.KeyCode;
@@ -39,8 +40,8 @@ public class BreakoutApp extends GameApplication {
     @Override
     protected void initSettings(GameSettings gameSettings) {
         gameSettings.setTitle("Breakout");
-        gameSettings.setWidth(800);
-        gameSettings.setHeight(600);
+        gameSettings.setWidth(880);
+        gameSettings.setHeight(780);
         gameSettings.setVersion("0.1");
         gameSettings.setIntroEnabled(false);
     }
@@ -53,9 +54,8 @@ public class BreakoutApp extends GameApplication {
 
     public void initLevel(){
         TextLevelParser parser = new TextLevelParser(new BreakoutFactory());
-        Level level = parser.parse("levels/bricksballbar.txt");
+        Level level = parser.parse("levels/deathbricks.txt");
         getGameWorld().setLevel(level);
-        System.out.println(getGameWorld().getSingleton(BreakoutType.BAT).get());
 
     }
 
@@ -82,8 +82,15 @@ public class BreakoutApp extends GameApplication {
 
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(BreakoutType.BALL, BreakoutType.BRICK) {
             @Override
+            protected void onCollisionBegin(Entity ball, Entity deathBrick) {
+                deathBrick.getComponent(BrickComponent.class).onHit();
+            }
+        });
+
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(BreakoutType.BALL, BreakoutType.DEATHBRICK) {
+            @Override
             protected void onCollisionBegin(Entity ball, Entity brick) {
-                brick.getComponent(BrickComponent.class).onHit();
+               loseLife();
             }
         });
     }
@@ -102,13 +109,14 @@ public class BreakoutApp extends GameApplication {
             getBallControl().release();
         });
         transition.play();
+        
     }
 
     private void initBackground(){
         Rectangle bg0 = new Rectangle(getWidth(), getHeight(),
                 new LinearGradient(getWidth() / 2, 0, getWidth() / 2,
                         getHeight(), false, CycleMethod.NO_CYCLE,
-                        new Stop(0.2, Color.AQUA), new Stop(0.8, Color.BLACK)));
+                        new Stop(0.2, Color.YELLOW), new Stop(0.8, Color.DARKRED)));
 
         Rectangle bg1 = new Rectangle(getWidth(), getHeight(), Color.color(0, 0, 0, 0.2));
         bg1.setBlendMode(BlendMode.DARKEN);
@@ -127,6 +135,23 @@ public class BreakoutApp extends GameApplication {
         screenBounds.addComponent(new IrremovableComponent());
 
         getGameWorld().addEntity(screenBounds);
+    }
+
+    public void loseLife(){
+        initLevel();
+        Text text = getUIFactory().newText("Try again", Color.BLACK, 48);
+        getGameScene().addUINode(text);
+        System.out.println(BallComponent.class);
+
+        QuadCurve curve = new QuadCurve(-100, 0, getWidth() / 2, getHeight(), getWidth() + 100, 0);
+
+        PathTransition transition = new PathTransition(Duration.seconds(4), curve, text);
+        transition.setOnFinished(e -> {
+            getGameScene().removeUINode(text);
+            getBallControl().release();
+        });
+        transition.play();
+
     }
 
     public static void main(String[] args) {

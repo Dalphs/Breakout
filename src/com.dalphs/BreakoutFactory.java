@@ -13,6 +13,7 @@ import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
 import com.dalphs.control.BallComponent;
 import com.dalphs.control.BatComponent;
 import com.dalphs.control.BrickComponent;
+import com.dalphs.control.DeathBrickComponent;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -27,7 +28,7 @@ public class BreakoutFactory implements TextEntityFactory {
         return Entities.builder()
                 .from(data)
                 .type(BreakoutType.BAT)
-                .at(FXGL.getSettings().getWidth() / 2 - 50, FXGL.getSettings().getHeight() - 30)
+                .at(FXGL.getSettings().getWidth() / 2 - 50, FXGL.getSettings().getHeight() - 100)
                 .viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("bar.png"))
                 .with(physics, new CollidableComponent(true))
                 .with(new BatComponent())
@@ -62,6 +63,16 @@ public class BreakoutFactory implements TextEntityFactory {
                 .viewFromNode(new Circle(10, Color.DARKGREY))
                 .with(physics, new CollidableComponent(true))
                 .with(new BallComponent())
+                .build();
+    }
+
+    @SpawnSymbol('3')
+    public Entity newDeathBrick(SpawnData data){
+        return Entities.builder()
+                .from(data)
+                .type(BreakoutType.DEATHBRICK).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("death.png"))
+                .with(new PhysicsComponent(), new CollidableComponent(true))
+                .with(new DeathBrickComponent())
                 .build();
     }
 

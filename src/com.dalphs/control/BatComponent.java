@@ -18,7 +18,7 @@ public class BatComponent extends Component {
 
     @Override
     public void onUpdate(double tpf) {
-        speed = 600 * (float) tpf;
+        speed = 900 * (float) tpf;
 
         velocity.mulLocal(SPEED_DECAY);
 

@@ -1,5 +1,5 @@
 package com.dalphs;
 
 public enum BreakoutType {
-    BAT, BALL, BRICK
+    BAT, BALL, BRICK, DEATHBRICK
 }
