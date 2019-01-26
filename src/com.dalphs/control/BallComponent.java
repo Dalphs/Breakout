@@ -30,7 +30,11 @@ public class BallComponent extends Component {
 
     public void release(){
         int x = (int) (Math.random() * 11) - 5;
-        int y = (int) (Math.random() * 11);
+        int y = (int) (Math.random() * 10) + 1;
         physics.setBodyLinearVelocity(new Vec2(x, y));
+    }
+
+    public void replace(){
+        entity.setPosition(400,500);
     }
 }

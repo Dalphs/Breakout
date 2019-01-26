@@ -11,6 +11,7 @@ import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.parser.text.TextLevelParser;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.settings.GameSettings;
+import com.almasb.fxgl.util.Optional;
 import com.dalphs.control.BallComponent;
 import com.dalphs.control.BatComponent;
 import com.dalphs.control.BrickComponent;
@@ -27,6 +28,9 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 public class BreakoutApp extends GameApplication {
+
+    private int lives = 3;
+    private int currentLevel = 1;
 
     private BatComponent getBatControl(){
         return getGameWorld().getSingleton(BreakoutType.BAT).get().getComponent(BatComponent.class);
@@ -52,9 +56,7 @@ public class BreakoutApp extends GameApplication {
     }
 
     public void initLevel(){
-        TextLevelParser parser = new TextLevelParser(new BreakoutFactory());
-        Level level = parser.parse("levels/deathbricks.txt");
-        getGameWorld().setLevel(level);
+        nextLevel();
 
     }
 
@@ -81,8 +83,13 @@ public class BreakoutApp extends GameApplication {
 
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(BreakoutType.BALL, BreakoutType.BRICK) {
             @Override
-            protected void onCollisionBegin(Entity ball, Entity deathBrick) {
-                deathBrick.getComponent(BrickComponent.class).onHit();
+            protected void onCollisionBegin(Entity ball, Entity brick) {
+                brick.getComponent(BrickComponent.class).onHit();
+
+                if(!getGameWorld().getEntities().toString().contains("BRICK") ){
+                    currentLevel++;
+                    nextLevel();
+                }
             }
         });
 
@@ -137,8 +144,19 @@ public class BreakoutApp extends GameApplication {
     }
 
     public void loseLife(){
-        initLevel();
-        Text text = getUIFactory().newText("Try again", Color.BLACK, 48);
+        gameText("Try again");
+    }
+
+    public void nextLevel(){
+        TextLevelParser parser = new TextLevelParser(new BreakoutFactory());
+        Level level = parser.parse("levels/level" + currentLevel + ".txt");
+        getGameWorld().setLevel(level);
+
+        gameText("Level " + currentLevel);
+    }
+
+    public void gameText(String s){
+        Text text = getUIFactory().newText(s, Color.BLACK, 48);
         getGameScene().addUINode(text);
         System.out.println(BallComponent.class);
 
