@@ -14,7 +14,6 @@ import com.almasb.fxgl.settings.GameSettings;
 import com.dalphs.control.BallComponent;
 import com.dalphs.control.BatComponent;
 import com.dalphs.control.BrickComponent;
-import com.dalphs.control.DeathBrickComponent;
 import javafx.animation.PathTransition;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.input.KeyCode;
@@ -40,7 +39,7 @@ public class BreakoutApp extends GameApplication {
     @Override
     protected void initSettings(GameSettings gameSettings) {
         gameSettings.setTitle("Breakout");
-        gameSettings.setWidth(880);
+        gameSettings.setWidth(900);
         gameSettings.setHeight(780);
         gameSettings.setVersion("0.1");
         gameSettings.setIntroEnabled(false);
@@ -87,7 +86,7 @@ public class BreakoutApp extends GameApplication {
             }
         });
 
-        getPhysicsWorld().addCollisionHandler(new CollisionHandler(BreakoutType.BALL, BreakoutType.DEATHBRICK) {
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(BreakoutType.BALL, BreakoutType.FIRE) {
             @Override
             protected void onCollisionBegin(Entity ball, Entity brick) {
                loseLife();
@@ -109,7 +108,7 @@ public class BreakoutApp extends GameApplication {
             getBallControl().release();
         });
         transition.play();
-        
+
     }
 
     private void initBackground(){

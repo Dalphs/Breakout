@@ -10,11 +10,13 @@ import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
+import com.almasb.fxgl.texture.Texture;
 import com.dalphs.control.BallComponent;
 import com.dalphs.control.BatComponent;
 import com.dalphs.control.BrickComponent;
-import com.dalphs.control.DeathBrickComponent;
+import com.dalphs.control.FireComponent;
 import javafx.scene.effect.BlendMode;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -39,7 +41,7 @@ public class BreakoutFactory implements TextEntityFactory {
     public Entity newBrick(SpawnData data){
         return Entities.builder()
                 .from(data)
-                .type(BreakoutType.BRICK).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("brick1.png"))
+                .type(BreakoutType.BRICK).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("brick1.png", 50, 24))
                 .with(new PhysicsComponent(), new CollidableComponent(true))
                 .with(new BrickComponent())
                 .build();
@@ -67,12 +69,12 @@ public class BreakoutFactory implements TextEntityFactory {
     }
 
     @SpawnSymbol('3')
-    public Entity newDeathBrick(SpawnData data){
+    public Entity newFIRE(SpawnData data){
         return Entities.builder()
                 .from(data)
-                .type(BreakoutType.DEATHBRICK).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("death.png"))
+                .type(BreakoutType.FIRE).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("fire.png", 100, 80))
                 .with(new PhysicsComponent(), new CollidableComponent(true))
-                .with(new DeathBrickComponent())
+                .with(new FireComponent())
                 .build();
     }
 
@@ -83,7 +85,7 @@ public class BreakoutFactory implements TextEntityFactory {
 
     @Override
     public int blockWidth() {
-        return 40;
+        return 50;
     }
 
     @Override
