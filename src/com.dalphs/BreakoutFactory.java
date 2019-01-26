@@ -61,6 +61,7 @@ public class BreakoutFactory implements TextEntityFactory {
         return Entities.builder()
                 .from(data)
                 .type(BreakoutType.BALL)
+                .at(390, 450)
                 .bbox(new HitBox("Main", BoundingShape.circle(10)))
                 .viewFromNode(new Circle(10, Color.DARKGREY))
                 .with(physics, new CollidableComponent(true))

@@ -96,7 +96,7 @@ public class BreakoutApp extends GameApplication {
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(BreakoutType.BALL, BreakoutType.FIRE) {
             @Override
             protected void onCollisionBegin(Entity ball, Entity brick) {
-               loseLife();
+               loseLife(ball);
             }
         });
     }
@@ -143,8 +143,26 @@ public class BreakoutApp extends GameApplication {
         getGameWorld().addEntity(screenBounds);
     }
 
-    public void loseLife(){
-        gameText("Try again");
+    public void loseLife(Entity ball){
+        getGameWorld().removeEntity(ball);
+        ball.setPosition(350,350);
+        getGameWorld().addEntity(ball);
+        lives--;
+        System.out.println(lives);
+        if(lives == 0)
+            gameLost(ball);
+        else
+            gameText("Try again");
+    }
+
+    public void gameLost(Entity ball){
+        Text text = getUIFactory().newText("YOU LOSE!", Color.BLACK, 100);
+        text.setX(200);
+        text.setY(400);
+
+        getGameScene().addUINode(text);
+        getGameWorld().removeEntity(ball);
+
     }
 
     public void nextLevel(){
@@ -158,7 +176,6 @@ public class BreakoutApp extends GameApplication {
     public void gameText(String s){
         Text text = getUIFactory().newText(s, Color.BLACK, 48);
         getGameScene().addUINode(text);
-        System.out.println(BallComponent.class);
 
         QuadCurve curve = new QuadCurve(-100, 0, getWidth() / 2, getHeight(), getWidth() + 100, 0);
 
