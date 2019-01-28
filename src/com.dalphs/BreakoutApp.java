@@ -29,8 +29,8 @@ import javafx.util.Duration;
 
 public class BreakoutApp extends GameApplication {
 
-    private int lives = 3;
-    private int currentLevel = 1;
+    private int lives;
+    private int currentLevel;
     private Text levelText;
     private Text livesText;
 
@@ -53,6 +53,8 @@ public class BreakoutApp extends GameApplication {
 
     @Override
     protected void initGame() {
+        lives = 3;
+        currentLevel = 1;
         initLevel();
         initBackground();
     }
@@ -90,6 +92,7 @@ public class BreakoutApp extends GameApplication {
 
                 if(!getGameWorld().getEntities().toString().contains("BRICK") ){
                     currentLevel++;
+                    lives++;
                     levelText.setText("Level: " + currentLevel);
                     nextLevel();
                 }
@@ -169,8 +172,6 @@ public class BreakoutApp extends GameApplication {
         TextLevelParser parser = new TextLevelParser(new BreakoutFactory());
         Level level = parser.parse("levels/level" + currentLevel + ".txt");
         getGameWorld().setLevel(level);
-
-        lives++;
 
         gameText("Level " + currentLevel);
     }
