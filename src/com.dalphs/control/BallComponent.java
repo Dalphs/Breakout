@@ -15,6 +15,7 @@ public class BallComponent extends Component {
         limitVelocity();
     }
 
+    //This methods makes sure that the ball does not fall below a specified speed, so the ball doesnt stop
     private void limitVelocity(){
 
         if(Math.abs(physics.getLinearVelocity().getX()) < 5 * 60){
@@ -29,11 +30,13 @@ public class BallComponent extends Component {
     }
 
     public void release(){
+        //The ball is released in a random upward direction
         int x = (int) (Math.random() * 11) - 5;
         int y = (int) (Math.random() * 10) + 1;
         physics.setBodyLinearVelocity(new Vec2(x, y));
     }
 
+    //Method is not used
     public void replace(){
         entity.setPosition(400,500);
     }

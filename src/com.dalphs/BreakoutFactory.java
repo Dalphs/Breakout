@@ -22,11 +22,13 @@ import javafx.scene.shape.Circle;
 
 public class BreakoutFactory implements TextEntityFactory {
 
+    //A 9 in a .txt file will translate to a bat
     @SpawnSymbol('9')
     public Entity newBat(SpawnData data) {
         PhysicsComponent physics = new PhysicsComponent();
         physics.setBodyType(BodyType.KINEMATIC);
 
+        //Building the bat using the BatComponent class and the physics defined above
         return Entities.builder()
                 .from(data)
                 .type(BreakoutType.BAT)
@@ -37,8 +39,10 @@ public class BreakoutFactory implements TextEntityFactory {
                 .build();
     }
 
+    //A 2 in a .txt will translate to a brick
     @SpawnSymbol('2')
     public Entity newBrick(SpawnData data){
+        //Building a new entity og using the BRICK component
         return Entities.builder()
                 .from(data)
                 .type(BreakoutType.BRICK).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("brick1.png", 50, 24))
@@ -47,8 +51,11 @@ public class BreakoutFactory implements TextEntityFactory {
                 .build();
     }
 
+    //A 1 in a .txt will translate to a ball
     @SpawnSymbol('1')
+    //building a entity from the BallComponent class
     public Entity newBall(SpawnData data){
+        //Defining the physics for the ball
         PhysicsComponent physics = new PhysicsComponent();
         physics.setBodyType(BodyType.DYNAMIC);
         physics.setFixtureDef(new FixtureDef().restitution(1f).density(0.03f));
@@ -58,6 +65,7 @@ public class BreakoutFactory implements TextEntityFactory {
         emitter.setEmissionRate(0.5);
         emitter.setBlendMode(BlendMode.SRC_OVER);
 
+        //Building a entity from the BallComponent class
         return Entities.builder()
                 .from(data)
                 .type(BreakoutType.BALL)
@@ -69,8 +77,10 @@ public class BreakoutFactory implements TextEntityFactory {
                 .build();
     }
 
+    //A 3 in a .txt spawns a fireelement using the FireComponent class
     @SpawnSymbol('3')
     public Entity newFIRE(SpawnData data){
+        //Creating a entity
         return Entities.builder()
                 .from(data)
                 .type(BreakoutType.FIRE).viewFromNodeWithBBox(FXGL.getAssetLoader().loadTexture("fire.png", 100, 80))
@@ -84,11 +94,13 @@ public class BreakoutFactory implements TextEntityFactory {
         return 0;
     }
 
+    //The width of a character in the .txt file
     @Override
     public int blockWidth() {
         return 50;
     }
 
+    //The height of af chahracther in the .txt file
     @Override
     public int blockHeight() {
         return 40;
