@@ -105,6 +105,7 @@ public class BreakoutApp extends GameApplication {
                 if(!getGameWorld().getEntities().toString().contains("BRICK") ){
                     currentLevel++;
                     lives++;
+                    livesText.setText("Lives: " + lives);
                     levelText.setText("Level: " + currentLevel);
                     nextLevel();
                 }
