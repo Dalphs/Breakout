@@ -11,11 +11,13 @@ import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.parser.text.TextLevelParser;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.settings.GameSettings;
-import com.almasb.fxgl.util.Optional;
 import com.dalphs.control.BallComponent;
 import com.dalphs.control.BatComponent;
 import com.dalphs.control.BrickComponent;
 import javafx.animation.PathTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
@@ -34,23 +36,26 @@ public class BreakoutApp extends GameApplication {
     private Text levelText;
     private Text livesText;
 
+    //Method to get access to the methods from the BatComponent class
     private BatComponent getBatControl(){
         return getGameWorld().getSingleton(BreakoutType.BAT).get().getComponent(BatComponent.class);
     }
 
+    //Method to get access to the methods from the BallComponent class
     private BallComponent getBallControl(){
         return getGameWorld().getSingleton(BreakoutType.BALL).get().getComponent(BallComponent.class);
     }
 
+    //THe basic settings foor the game, size and title
     @Override
     protected void initSettings(GameSettings gameSettings) {
         gameSettings.setTitle("Breakout");
         gameSettings.setWidth(900);
         gameSettings.setHeight(780);
         gameSettings.setVersion("0.1");
-        gameSettings.setIntroEnabled(false);
     }
 
+    //Method that starts the game and initialises number of lives and the current level
     @Override
     protected void initGame() {
         lives = 3;
@@ -59,13 +64,15 @@ public class BreakoutApp extends GameApplication {
         initBackground();
     }
 
+    //Method that starts the first level
     public void initLevel(){
         nextLevel();
-
     }
 
+    //Method which controls the bar using user input.
     @Override
     protected void initInput() {
+        //If user presses A the left() method from the BatComponent class is called on the bat in the game
         getInput().addAction(new UserAction("Move Left") {
             @Override
             protected void onAction() {
@@ -73,6 +80,7 @@ public class BreakoutApp extends GameApplication {
             }
         }, KeyCode.A );
 
+        //If user presses D the right() method from the BatComponent class is called on the bat in the game
         getInput().addAction(new UserAction("Move Right") {
             @Override
             protected void onAction() {
@@ -165,6 +173,26 @@ public class BreakoutApp extends GameApplication {
 
         getGameScene().addUINode(text);
         getGameWorld().removeEntity(ball);
+
+        Button retryButton = new Button("Try again");
+        retryHandler retryHandler = new retryHandler();
+        retryButton.setOnAction(retryHandler);
+        retryButton.setLayoutY(450);
+        retryButton.setLayoutX(350);
+        retryButton.setPrefSize(150,75);
+
+
+        getGameScene().addUINode(retryButton);
+
+    }
+
+    class retryHandler implements EventHandler<ActionEvent> {
+
+        @Override
+        public void handle(ActionEvent e){
+            getGameScene().clear();
+            initGame();
+        }
 
     }
 
