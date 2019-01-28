@@ -31,6 +31,8 @@ public class BreakoutApp extends GameApplication {
 
     private int lives = 3;
     private int currentLevel = 1;
+    private Text levelText;
+    private Text livesText;
 
     private BatComponent getBatControl(){
         return getGameWorld().getSingleton(BreakoutType.BAT).get().getComponent(BatComponent.class);
@@ -88,6 +90,7 @@ public class BreakoutApp extends GameApplication {
 
                 if(!getGameWorld().getEntities().toString().contains("BRICK") ){
                     currentLevel++;
+                    levelText.setText("Level: " + currentLevel);
                     nextLevel();
                 }
             }
@@ -103,18 +106,15 @@ public class BreakoutApp extends GameApplication {
 
     @Override
     protected void initUI() {
-        Text text = getUIFactory().newText("Level 1", Color.BLACK, 48);
-        getGameScene().addUINode(text);
-        System.out.println(BallComponent.class);
+        levelText = getUIFactory().newText("Level: " + currentLevel, Color.GREY, 28);
+        levelText.setY(30); levelText.setX(20);
 
-        QuadCurve curve = new QuadCurve(-100, 0, getWidth() / 2, getHeight(), getWidth() + 100, 0);
+        livesText = getUIFactory().newText("Lives: " + lives, Color.GREY, 28);
+        livesText.setY(30); livesText.setX(760);
 
-        PathTransition transition = new PathTransition(Duration.seconds(4), curve, text);
-        transition.setOnFinished(e -> {
-            getGameScene().removeUINode(text);
-            getBallControl().release();
-        });
-        transition.play();
+        getGameScene().addUINodes(levelText, livesText);
+
+        gameText("Level 1");
 
     }
 
@@ -148,7 +148,7 @@ public class BreakoutApp extends GameApplication {
         ball.setPosition(350,350);
         getGameWorld().addEntity(ball);
         lives--;
-        System.out.println(lives);
+        livesText.setText("Lives: " + lives);
         if(lives == 0)
             gameLost(ball);
         else
@@ -169,6 +169,8 @@ public class BreakoutApp extends GameApplication {
         TextLevelParser parser = new TextLevelParser(new BreakoutFactory());
         Level level = parser.parse("levels/level" + currentLevel + ".txt");
         getGameWorld().setLevel(level);
+
+        lives++;
 
         gameText("Level " + currentLevel);
     }
