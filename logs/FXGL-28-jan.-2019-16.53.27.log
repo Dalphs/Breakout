@@ -1,0 +1,431 @@
+16:52:55.708 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+16:52:55.724 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+16:52:55.842 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 900.0 x 780.0
+16:52:55.842 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    900.0 x 780.0
+16:52:55.843 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+16:52:55.847 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+16:52:55.867 [FXGL Launcher Thread     ] INFO  FXGL                 - FXGL-0.5.0 on DESKTOP
+16:52:55.868 [FXGL Launcher Thread     ] INFO  FXGL                 - Source code and latest versions at: https://github.com/AlmasB/FXGL
+16:52:55.868 [FXGL Launcher Thread     ] INFO  FXGL                 -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+16:52:55.873 [FXGL Launcher Thread     ] DEBUG FXGL                 - Loading FXGL system data
+16:52:55.884 [FXGL Launcher Thread     ] DEBUG FS                   - Reading from: system\fxgl.bundle
+16:52:55.898 [FXGL Launcher Thread     ] DEBUG Bundle               - Logging bundle: FXGL
+16:52:55.899 [FXGL Launcher Thread     ] DEBUG Bundle               - FXGL.offline.timer.version.check=2019-01-24T08:55:57.713219300
+16:52:55.934 [FXGL Launcher Thread     ] DEBUG GameApplication      - FXGL started
+16:52:55.934 [FXGL Launcher Thread     ] DEBUG GameApplication      - Logging game settings
+Title: Breakout
+Version: 0.1
+Width: 900
+Height: 780
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+16:52:55.935 [FXGL Launcher Thread     ] DEBUG GameApplication      - Configuring GameApplication
+16:52:55.935 [FXGL Launcher Thread     ] DEBUG GameApplication      - Initializing state machine and application states
+16:52:55.951 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+16:52:55.971 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+16:52:55.993 [FXGL Launcher Thread     ] DEBUG FXGLAssets           - Loading FXGLAssets
+16:52:56.022 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+16:52:56.203 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+16:52:56.208 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+16:52:56.208 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/icons/fxgl_icon.png
+16:52:56.252 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+16:52:56.258 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+16:52:56.284 [FXGL Launcher Thread     ] DEBUG GameScene            - Game scene initialized: 900x780
+16:52:56.290 [FXGL Launcher Thread     ] DEBUG GameWorld            - Game world initialized
+16:52:56.357 [FXGL Launcher Thread     ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=780, physics.ppm=50,0
+16:52:56.378 [FXGL Launcher Thread     ] DEBUG Input                - Registered new binding: Pause - Esc
+16:52:56.401 [FXGL Launcher Thread     ] DEBUG Input                - Clearing active input actions
+16:52:56.448 [FXGL Launcher Thread     ] DEBUG AppStateMachine      - StartupState -> StartupState
+16:52:56.462 [FXGL Launcher Thread     ] INFO  GameApplication      - Game configuration took:  0,526 sec
+16:52:56.467 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+16:52:56.576 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (14.4000244140625, 37.5999755859375)
+16:52:56.576 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 900.0 x 780.0
+16:52:56.576 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+16:52:56.577 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 900.0 x 780.0
+16:52:56.577 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 914.4000244140625 x 817.5999755859375
+16:52:56.577 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+16:52:56.580 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+16:52:56.581 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+16:52:56.582 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+16:52:56.583 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+16:52:56.583 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+16:52:56.584 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Right - D
+16:52:56.602 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+16:52:56.604 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+16:52:56.604 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+16:52:56.604 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+16:52:56.615 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+16:52:56.633 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+16:52:56.634 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+16:52:56.634 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+16:52:56.635 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+16:52:56.636 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+16:52:56.679 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/text/levels/level1.txt
+16:52:56.682 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.682 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.683 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.683 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.683 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.684 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.684 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.684 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.684 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.684 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.684 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.685 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.685 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.685 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.685 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.685 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.685 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.686 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.720 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/brick1.png
+16:52:56.734 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.734 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.735 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.735 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.735 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.735 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.735 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.736 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.736 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.736 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.736 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.736 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.736 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.736 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.737 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.737 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.737 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.738 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.740 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.740 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.741 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.741 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.741 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.741 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.741 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.743 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.745 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.745 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.746 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.746 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.746 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.746 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.747 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.748 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.749 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.750 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.750 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.751 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.752 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.753 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.753 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.753 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.754 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.755 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.757 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.758 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.759 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.759 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.759 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.760 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.760 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.761 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.761 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.761 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.762 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.762 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.762 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.763 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.764 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.767 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.769 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.770 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.772 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.773 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.774 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.776 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.776 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.777 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.778 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.778 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.778 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.778 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.778 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.778 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.778 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.779 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.780 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.780 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.781 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.781 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.781 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.781 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.781 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.782 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.783 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.784 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.784 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.784 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.784 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.785 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.785 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.785 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.786 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.786 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.787 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.788 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.789 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.790 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.791 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.791 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.792 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.793 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick1.png@50.0x24.0
+16:52:56.793 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.794 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.795 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.796 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.796 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.796 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.796 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.796 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.796 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.796 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.796 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.797 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.797 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.797 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.797 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.797 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.797 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.797 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.798 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.798 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.798 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.798 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.799 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.799 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.799 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.799 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.799 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.799 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.799 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.800 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.800 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.800 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.800 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.800 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.800 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.801 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.801 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.801 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.801 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.801 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.802 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.803 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.803 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.803 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.803 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.803 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.803 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.803 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.804 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.804 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.804 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.804 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.805 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.805 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.806 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.806 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.806 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.806 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.806 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.806 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.806 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.806 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.807 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.808 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.809 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.810 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.811 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.812 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.813 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.813 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.821 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.821 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.821 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.822 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.823 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.823 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.823 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.823 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/bar.png
+16:52:56.825 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.826 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.826 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.826 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.826 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.826 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.826 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.826 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.826 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.827 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.828 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.829 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.832 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.833 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.835 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/fire.png
+16:52:56.850 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.851 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/fire.png@100.0x80.0
+16:52:56.852 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.852 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/fire.png@100.0x80.0
+16:52:56.853 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.854 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/fire.png@100.0x80.0
+16:52:56.854 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.855 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/fire.png@100.0x80.0
+16:52:56.856 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.856 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/fire.png@100.0x80.0
+16:52:56.857 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.857 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/fire.png@100.0x80.0
+16:52:56.858 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.858 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/fire.png@100.0x80.0
+16:52:56.859 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.860 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/fire.png@100.0x80.0
+16:52:56.860 [FXGL Background Thread 1 ] WARN  FXGL.TextLevelParser - No producer found for character: 0
+16:52:56.861 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing removable entities
+16:52:56.861 [FXGL Background Thread 1 ] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.Level@35d38842
+16:52:56.884 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: DEFAULT(100000)
+16:52:56.907 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: BACKGROUND(1000)
+16:52:56.909 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+16:52:56.909 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+16:52:56.910 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+16:52:56.911 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0,278 sec
+16:52:56.918 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+16:52:56.939 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+16:53:27.330 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+16:53:27.331 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+16:53:27.332 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+16:53:27.332 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+16:53:27.335 [JavaFX Application Thread] DEBUG FS                   - Writing to: system\fxgl.bundle
+16:53:27.338 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX
